@@ -236,22 +236,22 @@ static void ReadDataFilesInSearchPaths(ManifestFileType type, const std::string 
                 xdg_data_dirs_alloc = false;
             }
 
-            if (nullptr == xdg_conf_dirs || xdg_conf_dirs[0] == '\0') {
-                CopyIncludedPaths(true, FALLBACK_CONFIG_DIRS, relative_path, search_path);
-            } else {
-                CopyIncludedPaths(true, xdg_conf_dirs, relative_path, search_path);
-            }
-
-            CopyIncludedPaths(true, SYSCONFDIR, relative_path, search_path);
+//            if (nullptr == xdg_conf_dirs || xdg_conf_dirs[0] == '\0') {
+//                CopyIncludedPaths(true, FALLBACK_CONFIG_DIRS, relative_path, search_path);
+//            } else {
+//                CopyIncludedPaths(true, xdg_conf_dirs, relative_path, search_path);
+//            }
+//
+//            CopyIncludedPaths(true, SYSCONFDIR, relative_path, search_path);
 #if defined(EXTRASYSCONFDIR)
             CopyIncludedPaths(true, EXTRASYSCONFDIR, relative_path, search_path);
 #endif
 
-            if (xdg_data_dirs == nullptr || xdg_data_dirs[0] == '\0') {
-                CopyIncludedPaths(true, FALLBACK_DATA_DIRS, relative_path, search_path);
-            } else {
-                CopyIncludedPaths(true, xdg_data_dirs, relative_path, search_path);
-            }
+//            if (xdg_data_dirs == nullptr || xdg_data_dirs[0] == '\0') {
+//                CopyIncludedPaths(true, FALLBACK_DATA_DIRS, relative_path, search_path);
+//            } else {
+//                CopyIncludedPaths(true, xdg_data_dirs, relative_path, search_path);
+//            }
 
             if (nullptr != xdg_data_home) {
                 CopyIncludedPaths(true, xdg_data_home, relative_path, search_path);

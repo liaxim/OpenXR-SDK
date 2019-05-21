@@ -17,3 +17,14 @@ specification/examples.mk
 
 # Files related to pytest
 specification/scripts/.cache
+
+# android
+.gradle
+build
+.externalNativeBuild
+.idea
+local.properties
+*.iml
+bin/
+gen/
+obj/

@@ -35,6 +35,8 @@ if(WIN32)
     add_definitions(-DXR_OS_WINDOWS)
 elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
     add_definitions(-DXR_OS_LINUX)
+elseif(CMAKE_SYSTEM_NAME STREQUAL "Android")
+    add_definitions(-DXR_OS_ANDROID)
 endif()
 
 # Determine the presentation backend for Linux systems.
